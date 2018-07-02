@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Practice_Collections_and_Linq
 {
@@ -22,6 +23,9 @@ namespace Practice_Collections_and_Linq
             points = pts;
             rebounds = reb;
             assists = asst;
-        }
+
+            string PlayerProfile = string.Format("Player: {0}\nPoints: {1}\nRebounds: {2}\nAssists: {3}",
+                player, points, rebounds, assists);
+        } 
     }
 }
