@@ -17,6 +17,18 @@ namespace Practice_Collections_and_Linq
                 new stats("Andre Drummond", 15.0, 16.0, 3.0),
                 new stats("Rajon Rondo", 8.3, 4.0, 8.2)
             };
-        }
+
+            var StatRanker = from StatProfiles in players
+                             orderby StatProfiles.points descending
+                             select StatProfiles;
+
+            foreach (var item in StatRanker)
+            {
+                Console.WriteLine("Player: {0}\nPoints: {1}\nRebounds{2}\nAssists: {3}\n",
+                    item.player, item.points, item.rebounds, item.assists);
+            }
+
+            Console.ReadLine();
+        } 
     }
 }
